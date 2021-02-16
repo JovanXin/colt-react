@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pokecard {
+    margin: 2rem 2rem;
+    background-color: lightgrey;
+    border-radius: 1.5rem;
+}
+
+.pokecard__name {
+    padding-top: 2rem;
+}
+
+.pokecard__stats {
+    margin-bottom: 1rem;
+}
+
+.pokecard__img {
+    width: 8rem;
+}
+
+@media only screen and (max-width: 75rem) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+@media only screen and (max-width: 55rem) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pokecard__img {
+        width: 10rem;
+    }
+}
+
+@media only screen and (max-width: 40rem) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .pokecard__img {
+        width: 15rem;
+    }
 }
